@@ -1,8 +1,13 @@
-version: 2 # use version 2.0 of CircleCI
-jobs: # a basic unit of work in a run
-  build: # runs not using `Workflows` must have a `build` job as entry point
-    macos:  # indicate that we are using the macOS executor
-      xcode: "10.0.0" # indicate our selected version of Xcode
-  steps:
-        - checkout # check out the code in the project directory
-        - run: echo "hello world" # run the `echo` command
+version: 2.1
+
+orbs:
+  win: circleci/windows@1.0.0
+
+jobs:
+  build:
+    executor:
+      name: win/vs2019
+      shell: bash.exe
+    steps:
+      - checkout
+      - run: echo 'Hello, Windows'
