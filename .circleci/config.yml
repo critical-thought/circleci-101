@@ -5,7 +5,7 @@ jobs:
       - image: alpine:3.7
     steps:
       - run:
-          name: The First Step
+          name: The Little Acorn
           command: |
             echo 'Hello World!'
-            echo 'This is the delivery pipeline update'
+            echo 'This is the delivery pipeline'
