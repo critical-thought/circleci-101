@@ -1,13 +1,5 @@
-version: 2.1
-
-orbs:
-  win: circleci/windows@1.0.0
-
+version: 2
 jobs:
   build:
-    executor:
-      name: win/vs2019
-      shell: bash.exe
-    steps:
-      - checkout
-      - run: echo 'Hello, Windows'
+    machine:
+      image: ubuntu-1604:201903-01    # pins image to specific version
