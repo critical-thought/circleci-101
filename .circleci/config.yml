@@ -8,4 +8,4 @@ jobs:
           name: The Little Acorn
           command: |
             echo 'Hello World!'
-            echo 'This is the delivery pipeline'
+            echo 'This is a little acorn.'
